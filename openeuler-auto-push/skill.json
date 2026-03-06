@@ -1,0 +1,25 @@
+{
+  "name": "openeuler-auto-push",
+  "version": "1.0.0",
+  "description": "Automate openEuler kernel patch workflow: create issue, update patches, push and create PR",
+  "author": "mufengyan",
+  "license": "MIT",
+  "main": "src/index.js",
+  "capabilities": ["browser", "exec", "filesystem"],
+  "entry": {
+    "cli": "src/cli.js",
+    "agent": "src/index.js"
+  },
+  "config": {
+    "local_kernel_path": {
+      "type": "string",
+      "description": "Path to local openEuler kernel repository",
+      "default": "/Users/mufengyan/Documents/openeuler_work/kernel_atom/kernel"
+    },
+    "patch_dir": {
+      "type": "string", 
+      "description": "Directory containing patch files",
+      "default": "/Users/mufengyan/Documents/openeuler_work/ubus_patches_2"
+    }
+  }
+}
